@@ -16,6 +16,19 @@ void test_pai(){
     assert(heap_pai(8)==3);
 }
 
+void test_filhos(){
+    assert(heap_filho_esq(0)==1);
+    assert(heap_filho_esq(1)==3);
+    assert(heap_filho_esq(2)==5);
+
+
+    assert(heap_filho_dir(0)==2);
+    assert(heap_filho_dir(1)==4);
+    assert(heap_filho_dir(2)==6);
+
+}
+
+
 
 int main(void){
     test_pai();
