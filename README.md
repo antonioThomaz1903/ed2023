@@ -23,3 +23,13 @@ pronto! agora vc tem um novo reposit√≥rio clonado no git. Para baixar o reposit√
 ```
 git clone <URL DO SSH DO NOVO REPOSITORIO. TEM QUE COMECAR COM GIT>
 ```
+
+## comandos para compilar
+
+```
+aclocal
+autoreconf --install
+./configure
+make
+make check
+```
