@@ -1,4 +1,4 @@
-[![C/C++ CI](https://github.com/edpfacom/facomedp2023/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/edpfacom/facomedp2023/actions/workflows/c-cpp.yml)
+[![C/C++ CI](https://github.com/edpfacom/libfacom/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/edpfacom/libfacom/actions/workflows/c-cpp.yml)
 
 # para clonar o repositório
 
@@ -24,7 +24,7 @@ pronto! agora vc tem um novo repositório clonado no git. Para baixar o reposit�
 git clone <URL DO SSH DO NOVO REPOSITORIO. TEM QUE COMECAR COM GIT>
 ```
 
-## comandos para compilar
+# comandos para compilar
 
 ```
 aclocal
@@ -33,3 +33,14 @@ autoreconf --install
 make
 make check
 ```
+
+# para incluir uma nova funcionalidade
+
+1. crie o teste dentro de tests/test_nova_funcionalidade.c
+2. adicione o arquivo criado em tests/Makefile.am (somente caso seja criado um novo arquivo de teste)
+3. adicione as interfaces das funções em src/facom.h
+4. crie o código fonte da funcionalidae em src/nova_funcionalidade.c
+5. adicione o arquivo criado em src/Makefile.am (somente caso seja criado um novo arquivo com funcionalidade)
+
+
+Pronto! agora basta dar um make e make check para verificar se o código está funcional
