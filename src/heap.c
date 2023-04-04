@@ -46,3 +46,11 @@ void heap_constroi(int v[],int n){
     }
 }
 
+
+int  heap_extrai_max(int v[],int *n){
+    int max = v[0];
+    troca(&v[0],&v[*n]);
+    heap_desce(v,*n,0);
+    *n = *n -1;
+    return max;
+}

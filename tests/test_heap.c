@@ -68,10 +68,23 @@ void test_constroi_heap(){
     assert(v[9] == 1);
 }
 
+void test_extrai_max(){
+
+    int v[10] = {8,5,4,2,1,3,6,7,9,10};
+    int n = 10;
+    heap_constroi(v,n);
+    int max = heap_extrai_max(v,&n);
+    assert(max == 10);
+    assert(v[0] == 9);
+    assert(v[1] == 8);
+    assert(v[3] == 7);
+    assert(v[7] == 1);
+}
 int main(void){
     test_pai();
     test_filhos();
     test_desce();
     test_constroi_heap();
+    test_extrai_max();
     return EXIT_SUCCESS;
 }
