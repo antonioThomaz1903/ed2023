@@ -52,9 +52,26 @@ void test_desce(){
 }
 
 
+void test_constroi_heap(){
+    int v[10] = {8,5,4,2,1,3,6,7,9,10};
+
+    heap_constroi(v,10);
+    assert(v[0] == 10);
+    assert(v[1] == 9);
+    assert(v[2] == 6);
+    assert(v[3] == 8);
+    assert(v[4] == 5);
+    assert(v[5] == 3);
+    assert(v[6] == 4);
+    assert(v[7] == 7);
+    assert(v[8] == 2);
+    assert(v[9] == 1);
+}
 
 int main(void){
     test_pai();
     test_filhos();
+    test_desce();
+    test_constroi_heap();
     return EXIT_SUCCESS;
 }
