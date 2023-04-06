@@ -41,7 +41,8 @@ void heap_desce(int v[], int n, int pai){
 
 void heap_constroi(int v[],int n){
     int i;
-    for (i = heap_pai(n);i>=0;i--){
+    int ultimo = n-1;
+    for (i = heap_pai(ultimo);i>=0;i--){
         heap_desce(v,n,i);
     }
 }
@@ -49,8 +50,9 @@ void heap_constroi(int v[],int n){
 
 int  heap_extrai_max(int v[],int *n){
     int max = v[0];
-    troca(&v[0],&v[*n]);
+    int ultimo = *n -1;
+    troca(&v[0],&v[ultimo]);
     heap_desce(v,*n,0);
-    *n = *n -1;
+    *n = *n-1;
     return max;
 }
