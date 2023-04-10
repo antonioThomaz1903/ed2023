@@ -10,6 +10,7 @@ git clone <seu repositorio.git>
 ```
 cd <seu diretorio>
 git remote add professor git@github.com:edpfacom/libfacom.git
+git config pull.rebase false
 git pull professor main
 git push origin main
 ```
