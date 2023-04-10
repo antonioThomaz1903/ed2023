@@ -1,12 +1,33 @@
 [![C/C++ CI](https://github.com/edpfacom/libfacom/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/edpfacom/libfacom/actions/workflows/c-cpp.yml)
 
+# para atualizar as infos com o repositorio do professor
+
+```
+git clone git@github.com:edpfacom/libfacom.git
+```
+
 # para clonar o repositório
 
 ## preparação da chave de acesso
 1. crie um repositório novo (repositories -> new )
-2. crie a chave no seu terminal local (ssh-keygen -t ed25519)
-3. copie a chave (cat ~/.ssh/id_ed25519.pub)
-4. adicione a chave no repositório novo (settings -> Deploy keys -> add deploy key)
+2. crie a chave no seu terminal local 
+```
+ssh-keygen -t ed25519
+```
+3. adicione a chave na maquina local 
+```
+exec ssh-agent bash
+ssh-add ~/.ssh/id_ed25519
+```
+
+4. copie a chave (cat ~/.ssh/id_ed25519.pub)
+5. adicione a chave no repositório novo (settings -> Deploy keys -> add deploy key). Coloque permissão de `writing` como verdadeiro
+
+6. verifique se a conexão está funcional
+```
+ssh git@github.com 
+```
+caso apareceça `Hi <SEU REPOSITORIO>! You've successfully authenticated, but GitHub does not provide shell access.` sua chave esta funcionando
 
 ## comandos para clonar o repositório
 ```
