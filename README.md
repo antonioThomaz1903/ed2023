@@ -2,9 +2,18 @@
 
 # para atualizar as infos com o repositorio do professor
 
+1. baixe seu repositorio
 ```
-git clone git@github.com:edpfacom/libfacom.git
+git clone <seu repositorio.git>
 ```
+2. adicione o repositorio do professor na sua área
+```
+cd <seu diretorio>
+git remote add professor git@github.com:edpfacom/libfacom.git
+git pull professor main
+git push origin main
+```
+
 
 # para clonar o repositório
 
