@@ -52,7 +52,7 @@ int  heap_extrai_max(int v[],int *n){
     int max = v[0];
     int ultimo = *n -1;
     troca(&v[0],&v[ultimo]);
-    heap_desce(v,*n,0);
+    heap_desce(v,ultimo,0);
     *n = *n-1;
     return max;
 }
