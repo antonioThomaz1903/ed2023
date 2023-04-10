@@ -34,13 +34,24 @@ make
 make check
 ```
 
-# para incluir uma nova funcionalidade
+# para incluir um novo algoritmo
 
 1. crie o teste dentro de tests/test_nova_funcionalidade.c
 2. adicione o arquivo criado em tests/Makefile.am (somente caso seja criado um novo arquivo de teste)
 3. adicione as interfaces das funções em src/facom.h
-4. crie o código fonte da funcionalidae em src/nova_funcionalidade.c
+4. crie o código fonte da funcionalidade em src/nova_funcionalidade.c
 5. adicione o arquivo criado em src/Makefile.am (somente caso seja criado um novo arquivo com funcionalidade)
 
 
 Pronto! agora basta dar um make e make check para verificar se o código está funcional
+
+# para incluir uma nova função dentro de um algoritmo
+
+1. altere o caso de teste em testes/test_heap.c
+2. adicione as interfaces em src/facom.c
+3. crie o codigo fonte da função em src/heap.c
+4. make
+5. make check
+
+
+
