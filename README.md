@@ -14,7 +14,7 @@ git config pull.rebase false
 git pull professor main
 git push origin main
 ```
-
+ pronto agora basta fazer o seu código
 
 # para clonar o repositório
 
