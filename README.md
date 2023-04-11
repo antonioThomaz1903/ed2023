@@ -49,9 +49,9 @@ ssh-add -D
 
 ## comandos para clonar o repositório (modo principal)
 ```
-git clone --bare git@github.com:edpfacom/libfacom.git
+git clone git@github.com:edpfacom/libfacom.git
 cd libfacom.git
-git remote add origin git@github.com:edsontm/edpfacom.git
+git remote add origin git@github.com:<SEU REPOSITORIO>
 git branch -M main
 git push -u origin main
 ```
