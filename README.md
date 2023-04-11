@@ -58,21 +58,6 @@ git push -u origin main
 ```
 
 
-## comandos para clonar o repositório (modo 2)
-```
-git clone --bare git@github.com:edpfacom/libfacom.git
-cd libfacom.git
-git push --mirror <URL DO SSH DO NOVO REPOSITORIO. TEM QUE COMECAR COM GIT>
-cd ..
-rm -Rf libfacom.git
-```
-
-
-pronto! agora vc tem um novo repositório clonado no git. Para baixar o repositório 
-
-```
-git clone <URL DO SSH DO NOVO REPOSITORIO. TEM QUE COMECAR COM GIT>
-```
 
 # comandos para compilar
 
