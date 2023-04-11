@@ -82,7 +82,7 @@ Pronto! agora basta dar um make e make check para verificar se o código está f
 
 # para incluir uma nova função dentro de um algoritmo
 
-1. altere o caso de teste em testes/test_heap.c
+1. altere o caso de teste em tests/test_heap.c
 2. adicione as interfaces em src/facom.h
 3. crie o codigo fonte da função em src/heap.c
 4. make
