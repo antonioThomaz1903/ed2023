@@ -56,3 +56,31 @@ int  heap_extrai_max(int v[],int *n){
     *n = *n-1;
     return max;
 }
+void heap_sort(int v[],int n){
+    int i;
+    int max = n;
+    heap_constroi(v,n);
+    for (i=0;i<max;i++){
+        heap_extrai_max(v,&n);
+    }
+}
+
+
+void heap_altera_prioridade(int v[],int n, int pos, int novo_valor){
+    int pai;
+    if (pos < n){
+        if (novo_valor > v[pos]){ /* sobe */
+            v[pos] = novo_valor;
+            pai = heap_pai(pos);
+            while (v[pai] < v[pos]){
+                troca(&v[pai],&v[pos]);
+                pos = pai;
+                pai = heap_pai(pai);
+            }
+        }else{                    /* desce */
+            v[pos] = novo_valor;
+            heap_desce(v,n,pos);
+        }
+    }
+}
+
