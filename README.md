@@ -50,7 +50,8 @@ ssh-add -D
 ## comandos para clonar o repositório (modo principal)
 ```
 git clone git@github.com:edpfacom/libfacom.git
-cd libfacom.git
+cd libfacom
+git remote rename origin professor
 git remote add origin git@github.com:<SEU REPOSITORIO>
 git branch -M main
 git push -u origin main
