@@ -39,6 +39,14 @@ ssh-add ~/.ssh/id_ed25519
 ssh git@github.com 
 ```
 caso apareceça `Hi <SEU REPOSITORIO>! You've successfully authenticated, but GitHub does not provide shell access.` sua chave esta funcionando
+
+Caso dê errado apague as chaves anteriores ~/.ssh/id_* limpe o ssh-add
+```
+rm ~/.ssh/id_*
+ssh-add -D
+```
+ e repita os passos novamente
+
 ## comandos para clonar o repositório (modo principal)
 ```
 git clone --bare git@github.com:edpfacom/libfacom.git
