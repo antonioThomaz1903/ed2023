@@ -18,6 +18,7 @@ git push origin main
 
 # para clonar o repositório
 
+
 ## preparação da chave de acesso
 1. crie um repositório novo (repositories -> new )
 2. crie a chave no seu terminal local 
@@ -38,8 +39,17 @@ ssh-add ~/.ssh/id_ed25519
 ssh git@github.com 
 ```
 caso apareceça `Hi <SEU REPOSITORIO>! You've successfully authenticated, but GitHub does not provide shell access.` sua chave esta funcionando
+## comandos para clonar o repositório (modo principal)
+```
+git clone --bare git@github.com:edpfacom/libfacom.git
+cd libfacom.git
+git remote add origin git@github.com:edsontm/edpfacom.git
+git branch -M main
+git push -u origin main
+```
 
-## comandos para clonar o repositório
+
+## comandos para clonar o repositório (modo 2)
 ```
 git clone --bare git@github.com:edpfacom/libfacom.git
 cd libfacom.git
