@@ -1,4 +1,4 @@
-lib_LTLIBRARIES = libfacom.la
+lib_LTLIBRARIES = libfacom.la 
 libfacom_la_SOURCES = abb.c facom.c heap.c facom.h
 
 bin_PROGRAMS = main
