@@ -62,3 +62,9 @@ void RE(tnode **parv){
     y->h = max(altura(x),altura(C)) + 1;
 }
 
+
+void avl_rebalancear(tnode **parv){
+    int fb;
+    int fbf;
+    fb = altura((*parv)->esq) - altura((*parv)->dir);
+}

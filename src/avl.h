@@ -12,6 +12,7 @@ typedef struct _node{
 
 
 void avl_insere(tnode ** parv,titem reg);
+void avl_rebalancear(tnode **parv);
 
 
 #endif
