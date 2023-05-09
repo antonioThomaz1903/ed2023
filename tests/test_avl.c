@@ -31,7 +31,7 @@ void test_rebalancear(){
     /* teste caso 2 --> <- */
     avl_insere(&arv,50);
     avl_insere(&arv,23);
-    avl_rebalancear(&arv);  
+    avl_rebalancear(&(arv->dir));  
     assert(arv->item == 15);
     assert(arv->esq->item == 10);
     assert(arv->dir->item == 23);
@@ -42,7 +42,7 @@ void test_rebalancear(){
     avl_insere(&arv,5);
     avl_insere(&arv,30);
     avl_insere(&arv,25);
-    avl_rebalancear(&arv);  
+    avl_rebalancear(&(arv->dir->dir));  
     assert(arv->item == 15);
     assert(arv->esq->item == 10);
     assert(arv->esq->esq->item == 5);
@@ -54,7 +54,7 @@ void test_rebalancear(){
 
     /* teste caso 4 <-- -> */
     avl_insere(&arv,7);
-    avl_rebalancear(&arv);  
+    avl_rebalancear(&(arv->esq));  
     assert(arv->item == 15);
     assert(arv->esq->item == 7);
     assert(arv->esq->esq->item == 5);
