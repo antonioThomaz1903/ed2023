@@ -66,5 +66,30 @@ void RE(tnode **parv){
 void avl_rebalancear(tnode **parv){
     int fb;
     int fbf;
+    tnode *filho;
     fb = altura((*parv)->esq) - altura((*parv)->dir);
+
+    if(fb == -2){
+        filho = (*parv)->dir;
+        fbf = altura(filho->esq) - altura(filho->dir);
+        if(fbf <= 0){ // 1
+            RE(parv);
+        }
+        else{ // 2
+            RD(&(*parv)->dir);
+            RE(parv);
+        }
+    }
+    else if(fb==2){ //3
+        filho = (*parv)->esq;
+        fbf = altura(filho->esq) - altura(filho->dir);
+        if(fbf>=0){
+            RD(parv);
+        }
+        else{ //4
+            RE(&(*parv) ->esq);
+            RD(parv);
+        }
+    }
+
 }
