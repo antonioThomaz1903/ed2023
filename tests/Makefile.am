@@ -2,7 +2,7 @@ TESTS = test_par test_heap test_abb test_avl
 check_PROGRAMS = test_par test_heap test_abb test_avl
 
 
-test_avl_SOURCES = test_avl.c $(top_builddir)/src/facom.h
+test_avl_SOURCES = test_avl.c $(top_builddir)/src/avl.h
 test_avl_LDADD = $(top_builddir)/src/libfacom.la 
 
 
