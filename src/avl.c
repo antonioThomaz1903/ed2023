@@ -89,3 +89,49 @@ void avl_rebalancear(tnode **parv){
         }
     }
 }
+
+tnode ** percorre_esq(tnode ** arv){
+    tnode * aux = *arv;
+    if (aux->esq  == NULL){
+        return arv;
+    }else{
+        while (aux->esq->esq != NULL)
+            aux = aux->esq;
+        return &(aux->esq);
+    }
+}
+void avl_remove(tnode **parv, titem reg){
+    int cmp;
+    tnode *aux;
+    tnode **sucessor;
+    if (*parv != NULL){
+        cmp  = (*parv)->item  - reg;
+        if (cmp > 0){ /* ir esquerda*/
+            avl_remove(&((*parv)->esq), reg);
+        }else if (cmp < 0){ /*ir direita*/
+            avl_remove(&((*parv)->dir), reg);
+        }else{ /* ACHOU  */
+            if ((*parv)->esq == NULL && (*parv)->dir == NULL){   /* no folha */
+                free(*parv);
+                *parv = NULL;
+            }else if ((*parv)->esq == NULL || (*parv)->dir == NULL){ /* tem um filho*/
+                aux = *parv;
+                if ((*parv)->esq == NULL){
+                    *parv = (*parv)->dir;
+                }else{
+                    *parv = (*parv)->esq;
+                }
+                free(aux);
+            }else{ /* tem dois filhos */
+                sucessor = percorre_esq(&(*parv)->dir);
+                (*parv)->item = (*sucessor)->item;
+                avl_remove(&(*parv)->dir,(*sucessor)->item);
+            }
+
+        }
+        if (*parv != NULL){
+            (*parv)->h = max(altura((*parv)->esq),altura((*parv)->dir)) + 1;
+            avl_rebalancear(parv);
+        }
+    }
+}
