@@ -31,7 +31,7 @@ void avl_insere(tnode ** parv,titem item){
         avl_insere(&(*parv)->dir,item);
     }
     (*parv)->h = max(altura((*parv)->esq),altura((*parv)->dir)) + 1;
-    /* rebalancear(parv);*/
+    avl_rebalancear(parv);
 }
 
 void RD(tnode **parv){
